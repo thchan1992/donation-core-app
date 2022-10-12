@@ -3,7 +3,10 @@ import PrimaryButton from "../components/PrimaryButton";
 
 const ReceiptScreen = ({ navigation, route }) => {
   const handleCompleted = () => {
-    navigation.replace("MenuScreen");
+    navigation.reset({
+      index: 0,
+      routes: [{ name: "MenuScreen" }],
+    });
   };
   return (
     <View style={styles.container}>
