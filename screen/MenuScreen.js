@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { selectedCharity } from "../data/charityData";
 
 import PrimaryButton from "../components/PrimaryButton";
@@ -39,16 +39,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-  },
-  button: {
-    width: 100,
-    margin: 10,
-    borderRadius: 8,
-    backgroundColor: "grey",
-  },
-  text: {
-    alignSelf: "center",
-    padding: 10,
   },
 });
 
