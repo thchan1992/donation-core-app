@@ -19,13 +19,13 @@ export const orphansInNeed = {
 export const selectedCharity = (opt) => {
   let selection = {};
   switch (opt) {
-    case 1:
+    case "homeless":
       selection = shelter;
       break;
-    case 2:
+    case "refugee":
       selection = redCross;
       break;
-    case 3:
+    case "orphan":
       selection = orphansInNeed;
       break;
   }
