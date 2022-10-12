@@ -5,7 +5,7 @@ import CharityScreen from "./screen/CharityScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import GetAmountScreen from "./screen/GetAmountScreen";
-
+import CardPaymentScreen from "./screen/CardPaymentScreen";
 export default function App() {
   return (
     <>
@@ -14,6 +14,10 @@ export default function App() {
           <Stack.Screen name="MenuScreen" component={MenuScreen} />
           <Stack.Screen name="CharityScreen" component={CharityScreen} />
           <Stack.Screen name="GetAmountScreen" component={GetAmountScreen} />
+          <Stack.Screen
+            name="CardPaymentScreen"
+            component={CardPaymentScreen}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
