@@ -31,7 +31,7 @@ const CharityScreen = ({ navigation, route }) => {
       <PrimaryButton
         text={"Donate"}
         onPress={() => {
-          console.log("Go to Screen that handles payment");
+          navigation.navigate("GetAmountScreen", { charity: charity });
         }}
       />
     </View>
