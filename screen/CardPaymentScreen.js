@@ -9,8 +9,10 @@ const CardPaymentScreen = ({ navigation, route }) => {
   const [cvv, setCvv] = useState(null);
   const [expDate, setExpDate] = useState(null);
   const handlePayment = () => {
-    console.log(charity);
-    console.log(cardNum, "\n", cvv, "\n", expDate, "\n");
+    navigation.navigate("ReceiptScreen", {
+      charity: charity,
+      donateAmount: donateAmount,
+    });
   };
   return (
     <View style={styles.container}>
