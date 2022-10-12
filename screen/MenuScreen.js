@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { selectedCharity } from "../data/charityData";
 
+import PrimaryButton from "../components/PrimaryButton";
+
 const MenuScreen = ({ navigation }) => {
   const onPressHandler = (opt) => {
     navigation.navigate("CharityScreen", { charity: selectedCharity(opt) });
@@ -9,30 +11,24 @@ const MenuScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.button}
+      <PrimaryButton
+        text={"Homeless"}
         onPress={() => {
           onPressHandler("homeless");
         }}
-      >
-        <Text style={styles.text}>Homeless</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
+      />
+      <PrimaryButton
+        text={"Refugee"}
         onPress={() => {
           onPressHandler("refugee");
         }}
-      >
-        <Text style={styles.text}>Refugee</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
+      />
+      <PrimaryButton
+        text={"Orphan"}
         onPress={() => {
           onPressHandler("orphan");
         }}
-      >
-        <Text style={styles.text}>Orphan</Text>
-      </TouchableOpacity>
+      />
     </View>
   );
 };
