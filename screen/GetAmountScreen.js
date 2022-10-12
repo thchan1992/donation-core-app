@@ -8,10 +8,10 @@ const GetAmountScreen = ({ navigation, route }) => {
   const { charity } = route.params;
 
   const handleSubmit = () => {
-    console.log(
-      "go to the card payment screen with the amount: ",
-      donateAmount
-    );
+    navigation.navigate("CardPaymentScreen", {
+      charity: charity,
+      donateAmount: donateAmount,
+    });
   };
 
   return (
