@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
+import NumberInput from "../components/NumberInput";
 
 const GetAmountScreen = ({ navigation, route }) => {
   const [donateAmount, setDonateAmount] = useState(null);
@@ -17,12 +18,10 @@ const GetAmountScreen = ({ navigation, route }) => {
     <View style={styles.container}>
       <Text>How much would you like to donate to {charity.name}?</Text>
       <View style={styles.inputContainer}>
-        <TextInput
-          onChangeText={setDonateAmount}
-          style={styles.input}
+        <NumberInput
           value={donateAmount}
-          placeholder="Donation Amount"
-          keyboardType="numeric"
+          setter={setDonateAmount}
+          placeholder={"Donation Amount"}
         />
         <PrimaryButton text={"Donate"} onPress={handleSubmit} />
       </View>
