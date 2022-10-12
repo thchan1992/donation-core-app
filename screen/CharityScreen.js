@@ -1,10 +1,39 @@
 import { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
+import PrimaryButton from "../components/PrimaryButton";
 
 const CharityScreen = ({ navigation, route }) => {
+  const [showDet, setShowDet] = useState(false);
+  const { charity } = route.params;
   return (
     <View style={styles.container}>
-      <Text>we suggest: {route.params.charity.name}</Text>
+      <Image style={styles.image} source={charity.imageUrl} />
+      <Text>we suggest: {charity.name}</Text>
+      {!showDet && (
+        <PrimaryButton
+          text={"Show Detail"}
+          onPress={() => {
+            setShowDet(true);
+          }}
+        />
+      )}
+      {showDet && (
+        <>
+          <PrimaryButton
+            text={"Hide"}
+            onPress={() => {
+              setShowDet(false);
+            }}
+          />
+          <Text>{charity.info}</Text>
+        </>
+      )}
+      <PrimaryButton
+        text={"Donate"}
+        onPress={() => {
+          console.log("Go to Screen that handles payment");
+        }}
+      />
     </View>
   );
 };
@@ -15,6 +44,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  image: {
+    width: 200,
+    height: 200,
+    borderWidth: 3,
+    borderColor: "black",
   },
 });
 
