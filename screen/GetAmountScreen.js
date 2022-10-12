@@ -16,6 +16,7 @@ const GetAmountScreen = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
+      <Image style={styles.image} source={charity.imageUrl} />
       <Text>How much would you like to donate to {charity.name}?</Text>
       <View style={styles.inputContainer}>
         <NumberInput
@@ -46,6 +47,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  image: { width: 200, height: 200 },
 });
 
 export default GetAmountScreen;
