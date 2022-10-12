@@ -6,6 +6,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import GetAmountScreen from "./screen/GetAmountScreen";
 import CardPaymentScreen from "./screen/CardPaymentScreen";
+import ReceiptScreen from "./screen/ReceiptScreen";
+
 export default function App() {
   return (
     <>
@@ -18,6 +20,7 @@ export default function App() {
             name="CardPaymentScreen"
             component={CardPaymentScreen}
           />
+          <Stack.Screen name="ReceiptScreen" component={ReceiptScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
