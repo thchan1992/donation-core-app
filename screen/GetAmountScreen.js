@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { View, Text, StyleSheet, Image, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TextInput,
+  ScrollView,
+} from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 import NumberInput from "../components/NumberInput";
 
@@ -17,15 +24,17 @@ const GetAmountScreen = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={charity.imageUrl} />
-      <Text>How much would you like to donate to {charity.name}?</Text>
-      <View style={styles.inputContainer}>
-        <NumberInput
-          value={donateAmount}
-          setter={setDonateAmount}
-          placeholder={"Donation Amount"}
-        />
-        <PrimaryButton text={"Donate"} onPress={handleSubmit} />
-      </View>
+      <ScrollView>
+        <Text>How much would you like to donate to {charity.name}?</Text>
+        <View style={styles.inputContainer}>
+          <NumberInput
+            value={donateAmount}
+            setter={setDonateAmount}
+            placeholder={"Donation Amount"}
+          />
+          <PrimaryButton text={"Donate"} onPress={handleSubmit} />
+        </View>
+      </ScrollView>
     </View>
   );
 };
