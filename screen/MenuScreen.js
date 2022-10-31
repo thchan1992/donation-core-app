@@ -11,6 +11,7 @@ const MenuScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <Text>Choose who you would like to donate</Text>
       <PrimaryButton
         text={"Homeless"}
         onPress={() => {
