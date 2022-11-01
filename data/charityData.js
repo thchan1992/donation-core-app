@@ -22,11 +22,20 @@ export const orphansInNeed = {
   alias: "orphans in need",
 };
 
-export const homeless = "homeless";
+export const homeless = {
+  beneficiary: "homeless",
+  imageUrl: require("../assets/homeless.png"),
+};
 
-export const refugee = "refugee";
+export const refugee = {
+  beneficiary: "refugee",
+  imageUrl: require("../assets/refugees.png"),
+};
 
-export const orphans = "orphans";
+export const orphans = {
+  beneficiary: "orphans",
+  imageUrl: require("../assets/orphan.png"),
+};
 
 export const beneficiaryList = [homeless, refugee, orphans];
 
