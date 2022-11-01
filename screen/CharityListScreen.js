@@ -1,16 +1,15 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { useEffect } from "react";
 import PrimaryButton from "../components/PrimaryButton";
-import FlatListItem from "../components/FlatListItem";
+import BeneficiaryListItem from "../components/BeneficiaryListItem";
 import { FlatList } from "react-native-gesture-handler";
 const CharityListScreen = ({ navigation, route }) => {
   const renderCharityList = (itemData) => {
     return (
-      <FlatListItem
+      <BeneficiaryListItem
         name={itemData.item.name}
         imageUrl={itemData.item.imageUrl}
         onPress={() => {
-          console.log("c", itemData.item);
           navigation.navigate("CharityScreen", { charity: itemData.item });
         }}
       />
