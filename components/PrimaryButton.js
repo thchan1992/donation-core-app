@@ -12,13 +12,19 @@ export default PrimaryButton;
 
 const styles = StyleSheet.create({
   button: {
-    width: 100,
+    width: 150,
+    height: 70,
     margin: 10,
     borderRadius: 8,
-    backgroundColor: "grey",
+    backgroundColor: "#28C7FA",
+    borderRadius: 8,
+    borderWidth: 1.5,
+    borderColor: "#FF304F",
   },
   text: {
     alignSelf: "center",
-    padding: 10,
+    padding: 16,
+    fontWeight: "bold",
+    fontSize: 30,
   },
 });

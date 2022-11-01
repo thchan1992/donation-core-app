@@ -34,7 +34,6 @@ export default CharityListScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -43,5 +42,6 @@ const styles = StyleSheet.create({
     padding: 5,
     fontWeight: "bold",
     fontSize: 25,
+    color: "white",
   },
 });

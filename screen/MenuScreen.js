@@ -40,7 +40,7 @@ const MenuScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    // backgroundColor: "#002651",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     padding: 5,
     fontWeight: "bold",
     fontSize: 25,
+    color: "white",
   },
 });
 

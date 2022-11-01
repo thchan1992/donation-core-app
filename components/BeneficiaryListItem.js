@@ -11,7 +11,7 @@ const BeneficiaryListItem = ({ name, imageUrl, onPress }) => {
           justifyContent: "center",
           borderRadius: 8,
           borderWidth: 1.5,
-          borderColor: "black",
+          borderColor: "#FF304F",
         }}
         source={imageUrl}
       />
@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
     width: 200,
     margin: 5,
     borderRadius: 8,
-    backgroundColor: "grey",
+    backgroundColor: "#28C7FA",
     borderRadius: 8,
     borderWidth: 1.5,
-    borderColor: "black",
+    borderColor: "#FF304F",
   },
   text: {
     alignSelf: "center",
@@ -39,5 +39,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textTransform: "uppercase",
     fontSize: 20,
+    color: "black",
   },
 });

@@ -10,9 +10,9 @@ const ReceiptScreen = ({ navigation, route }) => {
   };
   return (
     <View style={styles.container}>
-      <Text>
+      <Text style={styles.instrucText}>
         Thank you for your {route.params.donateAmount} donation to{" "}
-        {route.params.charity.name}
+        {route.params.charity.name}!
       </Text>
       <PrimaryButton text={"Done"} onPress={handleCompleted} />
     </View>
@@ -24,8 +24,14 @@ export default ReceiptScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  instrucText: {
+    alignSelf: "center",
+    padding: 5,
+    fontWeight: "bold",
+    fontSize: 25,
+    color: "white",
   },
 });

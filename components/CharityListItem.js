@@ -11,7 +11,7 @@ const CharityListItem = ({ name, imageUrl, onPress }) => {
           justifyContent: "center",
           borderRadius: 8,
           borderWidth: 1.5,
-          borderColor: "black",
+          borderColor: "#FF304F",
         }}
         source={imageUrl}
       />
@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 8,
     borderWidth: 1.5,
-    backgroundColor: "grey",
-    borderColor: "black",
+    backgroundColor: "#28C7FA",
+    borderColor: "#FF304F",
   },
   text: {
     alignSelf: "center",
@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textTransform: "uppercase",
     fontSize: 20,
+    color: "black",
   },
 
   smallerText: {
@@ -55,5 +56,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textTransform: "uppercase",
     fontSize: 12,
+    color: "black",
   },
 });

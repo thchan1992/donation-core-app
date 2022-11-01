@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 
 const CharityScreen = ({ navigation, route }) => {
@@ -7,33 +7,38 @@ const CharityScreen = ({ navigation, route }) => {
   const { charity } = route.params;
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={charity.imageUrl} />
-      <Text>we suggest: {charity.name}</Text>
-      {!showDet && (
+      {!showDet && <Image style={styles.image} source={charity.imageUrl} />}
+      <Text style={styles.text}>{charity.name}</Text>
+      <View style={{ flexDirection: "row" }}>
         <PrimaryButton
-          text={"Show Detail"}
+          text={"Donate"}
           onPress={() => {
-            setShowDet(true);
+            navigation.navigate("GetAmountScreen", { charity: charity });
           }}
         />
-      )}
-      {showDet && (
-        <>
+        {!showDet && (
+          <PrimaryButton
+            text={"Detail"}
+            onPress={() => {
+              setShowDet(true);
+            }}
+          />
+        )}
+        {showDet && (
           <PrimaryButton
             text={"Hide"}
             onPress={() => {
               setShowDet(false);
             }}
           />
-          <Text>{charity.info}</Text>
-        </>
+        )}
+      </View>
+
+      {showDet && (
+        <ScrollView>
+          <Text style={styles.infoText}>{charity.info}</Text>
+        </ScrollView>
       )}
-      <PrimaryButton
-        text={"Donate"}
-        onPress={() => {
-          navigation.navigate("GetAmountScreen", { charity: charity });
-        }}
-      />
     </View>
   );
 };
@@ -41,15 +46,30 @@ const CharityScreen = ({ navigation, route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
+    paddingTop: 10,
   },
   image: {
-    width: 200,
-    height: 200,
+    paddingTop: 40,
+    width: 250,
+    height: 250,
     borderWidth: 3,
-    borderColor: "black",
+    borderColor: "#FF304F",
+    borderRadius: 8,
+    padding: 30,
+  },
+  text: {
+    alignSelf: "center",
+    padding: 3,
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    fontSize: 20,
+    color: "white",
+  },
+  infoText: {
+    padding: 10,
+    fontSize: 30,
+    color: "white",
   },
 });
 
