@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Alert } from "react-native";
 import { useState } from "react";
 import NumberInput from "../components/NumberInput";
 import PrimaryButton from "../components/PrimaryButton";
@@ -8,11 +8,27 @@ const CardPaymentScreen = ({ navigation, route }) => {
   const [cardNum, setCardNum] = useState(null);
   const [cvv, setCvv] = useState(null);
   const [expDate, setExpDate] = useState(null);
+  const fixCardNum = "1234889012345555";
+  const fixCvv = "539";
+  const fixExpDate = "02/23";
+
+  const showAlert = () => {
+    Alert.alert(
+      "Warning",
+      "The system does not recognise this credit card, please try again.",
+      [{ text: "OK", onPress: () => console.log("OK Pressed") }]
+    );
+  };
+
   const handlePayment = () => {
-    navigation.navigate("ReceiptScreen", {
-      charity: charity,
-      donateAmount: donateAmount,
-    });
+    if (cardNum == fixCardNum && cvv == fixCvv && expDate == fixExpDate) {
+      navigation.navigate("ReceiptScreen", {
+        charity: charity,
+        donateAmount: donateAmount,
+      });
+    } else {
+      showAlert();
+    }
   };
 
   const handleExpDate = (e) => {

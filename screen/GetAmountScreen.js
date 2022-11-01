@@ -6,6 +6,7 @@ import {
   Image,
   TextInput,
   ScrollView,
+  Alert,
 } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 import NumberInput from "../components/NumberInput";
@@ -14,11 +15,21 @@ const GetAmountScreen = ({ navigation, route }) => {
   const [donateAmount, setDonateAmount] = useState(null);
   const { charity } = route.params;
 
+  const showAlert = () => {
+    Alert.alert("Warning", "Please Insert the donation amount", [
+      { text: "OK", onPress: () => console.log("OK Pressed") },
+    ]);
+  };
+
   const handleSubmit = () => {
-    navigation.navigate("CardPaymentScreen", {
-      charity: charity,
-      donateAmount: donateAmount,
-    });
+    if (donateAmount == null || donateAmount == "") {
+      showAlert();
+    } else {
+      navigation.navigate("CardPaymentScreen", {
+        charity: charity,
+        donateAmount: donateAmount,
+      });
+    }
   };
 
   return (
