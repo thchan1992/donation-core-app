@@ -24,7 +24,9 @@ const MenuScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text>Choose who you would like to donate</Text>
+      <Text style={styles.instrucText}>
+        Choose who you would like to donate
+      </Text>
       <FlatList
         data={beneficiaryList}
         keyExtractor={(bene) => bene.beneficiary}
@@ -41,6 +43,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  instrucText: {
+    alignSelf: "center",
+    padding: 5,
+    fontWeight: "bold",
   },
 });
 
