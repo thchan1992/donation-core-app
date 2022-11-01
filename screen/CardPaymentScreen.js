@@ -7,7 +7,7 @@ const CardPaymentScreen = ({ navigation, route }) => {
   const { charity, donateAmount } = route.params;
   const [cardNum, setCardNum] = useState(null);
   const [cvv, setCvv] = useState(null);
-  const [expDate, setExpDate] = useState(null);
+  const [expDate, setExpDate] = useState("");
   const fixCardNum = "1234889012345555";
   const fixCvv = "539";
   const fixExpDate = "02/23";
@@ -33,7 +33,7 @@ const CardPaymentScreen = ({ navigation, route }) => {
 
   const handleExpDate = (e) => {
     setExpDate(e);
-    if (e.length == 2) {
+    if (e.length == 2 && expDate.length == 1) {
       setExpDate((e) => e + "/");
     }
   };
