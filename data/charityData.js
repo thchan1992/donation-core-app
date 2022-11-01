@@ -39,11 +39,11 @@ export const selectedCharity = (opt) => {
     case "refugee":
       selection = redCross;
       break;
-    case "orphan":
+    case "orphans":
       selection = orphansInNeed;
       break;
   }
   return selection;
 };
 
-export const charityList = [shelter, shelter, redCross, orphansInNeed];
+export const charityList = [shelter, redCross, orphansInNeed];

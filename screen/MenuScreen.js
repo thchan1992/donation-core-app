@@ -1,35 +1,35 @@
 import { useState, useEffect } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { selectedCharity } from "../data/charityData";
 
 import PrimaryButton from "../components/PrimaryButton";
+import { beneficiaryList, charityList } from "../data/charityData";
 
 const MenuScreen = ({ navigation }) => {
   const onPressHandler = (opt) => {
-    navigation.navigate("CharityScreen", { charity: selectedCharity(opt) });
+    console.log("pre", charityList);
+    const arr = charityList.filter((char) => {
+      return char.beneficiary == opt;
+    });
+    navigation.navigate("CharityScreen", { charityList: arr });
   };
 
   return (
     <View style={styles.container}>
       <Text>Choose who you would like to donate</Text>
-      <PrimaryButton
-        text={"Homeless"}
-        onPress={() => {
-          onPressHandler("homeless");
-        }}
-      />
-      <PrimaryButton
-        text={"Refugee"}
-        onPress={() => {
-          onPressHandler("refugee");
-        }}
-      />
-      <PrimaryButton
-        text={"Orphan"}
-        onPress={() => {
-          onPressHandler("orphan");
-        }}
-      />
+      <ScrollView>
+        {beneficiaryList.map((obj) => {
+          return (
+            <PrimaryButton
+              text={obj}
+              onPress={() => {
+                console.log(obj);
+                onPressHandler(obj);
+              }}
+            />
+          );
+        })}
+      </ScrollView>
     </View>
   );
 };
