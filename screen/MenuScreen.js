@@ -7,11 +7,10 @@ import { beneficiaryList, charityList } from "../data/charityData";
 
 const MenuScreen = ({ navigation }) => {
   const onPressHandler = (opt) => {
-    console.log("pre", charityList);
     const arr = charityList.filter((char) => {
       return char.beneficiary == opt;
     });
-    navigation.navigate("CharityScreen", { charityList: arr });
+    navigation.navigate("CharityListScreen", { charityList: arr });
   };
 
   return (
