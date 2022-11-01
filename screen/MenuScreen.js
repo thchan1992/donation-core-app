@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     padding: 5,
     fontWeight: "bold",
+    fontSize: 25,
   },
 });
 

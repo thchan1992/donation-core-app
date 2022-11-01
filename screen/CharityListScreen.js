@@ -17,6 +17,9 @@ const CharityListScreen = ({ navigation, route }) => {
   };
   return (
     <View style={styles.container}>
+      <Text style={styles.instrucText}>
+        Choose which charity you would like to donate
+      </Text>
       <FlatList
         data={route.params.charityList}
         keyExtractor={(char) => char.name}
@@ -34,5 +37,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  instrucText: {
+    alignSelf: "center",
+    padding: 5,
+    fontWeight: "bold",
+    fontSize: 25,
   },
 });

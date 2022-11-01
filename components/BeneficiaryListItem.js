@@ -35,8 +35,9 @@ const styles = StyleSheet.create({
   },
   text: {
     alignSelf: "center",
-    padding: 5,
+    padding: 2.5,
     fontWeight: "bold",
     textTransform: "uppercase",
+    fontSize: 20,
   },
 });
