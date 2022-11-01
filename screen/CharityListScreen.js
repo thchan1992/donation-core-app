@@ -1,21 +1,29 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { useEffect } from "react";
 import PrimaryButton from "../components/PrimaryButton";
+import FlatListItem from "../components/FlatListItem";
+import { FlatList } from "react-native-gesture-handler";
 const CharityListScreen = ({ navigation, route }) => {
+  const renderCharityList = (itemData) => {
+    return (
+      <FlatListItem
+        name={itemData.item.name}
+        imageUrl={itemData.item.imageUrl}
+        onPress={() => {
+          console.log("c", itemData.item);
+          navigation.navigate("CharityScreen", { charity: itemData.item });
+        }}
+      />
+    );
+  };
   return (
     <View style={styles.container}>
-      <ScrollView>
-        {route.params.charityList.map((obj) => {
-          return (
-            <PrimaryButton
-              text={obj.name}
-              onPress={() => {
-                navigation.navigate("CharityScreen", { charity: obj });
-              }}
-            />
-          );
-        })}
-      </ScrollView>
+      <FlatList
+        data={route.params.charityList}
+        keyExtractor={(char) => char.name}
+        renderItem={renderCharityList}
+        numColumns={1}
+      />
     </View>
   );
 };
