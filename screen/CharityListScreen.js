@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import PrimaryButton from "../components/PrimaryButton";
 import CharityListItem from "../components/CharityListItem";
 import { FlatList } from "react-native-gesture-handler";
+import { charitySuggestionScreenMsg } from "../constants/msg";
 const CharityListScreen = ({ navigation, route }) => {
   const renderCharityList = (itemData) => {
     return (
@@ -17,9 +18,7 @@ const CharityListScreen = ({ navigation, route }) => {
   };
   return (
     <View style={styles.container}>
-      <Text style={styles.instrucText}>
-        Choose which charity you would like to donate
-      </Text>
+      <Text style={styles.instrucText}>{charitySuggestionScreenMsg}</Text>
       <FlatList
         data={route.params.charityList}
         keyExtractor={(char) => char.name}

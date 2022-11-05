@@ -5,6 +5,7 @@ import { FlatList } from "react-native-gesture-handler";
 import PrimaryButton from "../components/PrimaryButton";
 import { beneficiaryList, charityList } from "../data/charityData";
 import BeneficiaryListItem from "../components/BeneficiaryListItem";
+import { menuScreenMsg } from "../constants/msg";
 
 const MenuScreen = ({ navigation }) => {
   const renderBeneficiaryList = (itemData) => {
@@ -24,9 +25,7 @@ const MenuScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.instrucText}>
-        Choose who you would like to donate
-      </Text>
+      <Text style={styles.instrucText}>{menuScreenMsg}</Text>
       <FlatList
         data={beneficiaryList}
         keyExtractor={(bene) => bene.beneficiary}

@@ -55,4 +55,4 @@ export const selectedCharity = (opt) => {
   return selection;
 };
 
-export const charityList = [shelter, shelter, redCross, orphansInNeed];
+export const charityList = [shelter, shelter, shelter, redCross, orphansInNeed];

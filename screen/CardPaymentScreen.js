@@ -2,15 +2,17 @@ import { View, Text, StyleSheet, Alert } from "react-native";
 import { useState } from "react";
 import NumberInput from "../components/NumberInput";
 import PrimaryButton from "../components/PrimaryButton";
+import { ScrollView } from "react-native-gesture-handler";
+import { donationMsg } from "../constants/msg";
 
 const CardPaymentScreen = ({ navigation, route }) => {
   const { charity, donateAmount } = route.params;
   const [cardNum, setCardNum] = useState(null);
   const [cvv, setCvv] = useState(null);
   const [expDate, setExpDate] = useState("");
-  const fixCardNum = "1234889012345555";
-  const fixCvv = "539";
-  const fixExpDate = "02/23";
+  const fixCardNum = "1";
+  const fixCvv = "1";
+  const fixExpDate = "1";
 
   const showAlert = () => {
     Alert.alert(
@@ -38,39 +40,44 @@ const CardPaymentScreen = ({ navigation, route }) => {
     }
   };
   return (
-    <View style={styles.container}>
-      <Text style={styles.instrucText}>
-        Your donation amount to {charity.name} is: {donateAmount}
-      </Text>
-      <NumberInput
-        value={cardNum}
-        setter={setCardNum}
-        placeholder={"Card Number"}
-        height={29}
-        maxWidth={300}
-        minWidth={300}
-        maxLength={16}
-      />
-      <NumberInput
-        value={cvv}
-        setter={setCvv}
-        placeholder={"CVV"}
-        height={29}
-        maxWidth={80}
-        minWidth={80}
-        maxLength={3}
-      />
-      <NumberInput
-        value={expDate}
-        setter={handleExpDate}
-        placeholder={"EXP DATE"}
-        height={29}
-        maxWidth={150}
-        minWidth={150}
-        maxLength={5}
-      />
-      <PrimaryButton text="Confirm" onPress={handlePayment} />
-    </View>
+    <ScrollView>
+      <View style={styles.container}>
+        <Text style={styles.instrucText}>
+          {donationMsg(charity.name, donateAmount)}
+        </Text>
+
+        <View style={{ alignItems: "center", height: 550 }}>
+          <NumberInput
+            value={cardNum}
+            setter={setCardNum}
+            placeholder={"Card Number"}
+            height={29}
+            maxWidth={300}
+            minWidth={300}
+            maxLength={16}
+          />
+          <NumberInput
+            value={cvv}
+            setter={setCvv}
+            placeholder={"CVV"}
+            height={29}
+            maxWidth={80}
+            minWidth={80}
+            maxLength={3}
+          />
+          <NumberInput
+            value={expDate}
+            setter={handleExpDate}
+            placeholder={"EXP DATE"}
+            height={29}
+            maxWidth={150}
+            minWidth={150}
+            maxLength={5}
+          />
+          <PrimaryButton text="Confirm" onPress={handlePayment} />
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 

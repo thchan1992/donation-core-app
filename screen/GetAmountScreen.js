@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 import NumberInput from "../components/NumberInput";
+import { getAmountScreenMsg } from "../constants/msg";
 
 const GetAmountScreen = ({ navigation, route }) => {
   const [donateAmount, setDonateAmount] = useState(null);
@@ -22,7 +23,8 @@ const GetAmountScreen = ({ navigation, route }) => {
   };
 
   const handleSubmit = () => {
-    if (donateAmount == null || donateAmount == "") {
+    console.log(donateAmount);
+    if (donateAmount == null || donateAmount == 0) {
       showAlert();
     } else {
       navigation.navigate("CardPaymentScreen", {
@@ -33,13 +35,13 @@ const GetAmountScreen = ({ navigation, route }) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={charity.imageUrl} />
-      <ScrollView>
+    <ScrollView>
+      <View style={styles.container}>
+        <Image style={styles.image} source={charity.imageUrl} />
         <Text style={styles.instrucText}>
-          How much would you like to donate to {charity.name}?
+          {getAmountScreenMsg(charity.name)}
         </Text>
-        <View style={styles.inputContainer}>
+        <View style={[{ height: 400 }, styles.inputContainer]}>
           <NumberInput
             value={donateAmount}
             setter={setDonateAmount}
@@ -52,8 +54,8 @@ const GetAmountScreen = ({ navigation, route }) => {
           />
           <PrimaryButton text={"Donate"} onPress={handleSubmit} />
         </View>
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
   );
 };
 
@@ -71,7 +73,7 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
   },
   image: {
     width: 250,

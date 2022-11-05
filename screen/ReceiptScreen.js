@@ -11,7 +11,7 @@ const ReceiptScreen = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.instrucText}>
-        Thank you for your {route.params.donateAmount} donation to{" "}
+        Thank you for your £{route.params.donateAmount} donation to{" "}
         {route.params.charity.name}!
       </Text>
       <PrimaryButton text={"Done"} onPress={handleCompleted} />

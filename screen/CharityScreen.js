@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
-
+import { horizontalLine } from "../util/styling";
 const CharityScreen = ({ navigation, route }) => {
   const [showDet, setShowDet] = useState(false);
   const { charity } = route.params;
@@ -9,7 +9,13 @@ const CharityScreen = ({ navigation, route }) => {
     <View style={styles.container}>
       {!showDet && <Image style={styles.image} source={charity.imageUrl} />}
       <Text style={styles.text}>{charity.name}</Text>
-      <View style={{ flexDirection: "row" }}>
+      <View
+        style={[
+          { flexDirection: "row" },
+          { alignItems: "center" },
+          showDet ? horizontalLine.horizontalLine : undefined,
+        ]}
+      >
         <PrimaryButton
           text={"Donate"}
           onPress={() => {
@@ -33,7 +39,6 @@ const CharityScreen = ({ navigation, route }) => {
           />
         )}
       </View>
-
       {showDet && (
         <ScrollView>
           <Text style={styles.infoText}>{charity.info}</Text>
