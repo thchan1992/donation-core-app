@@ -23,5 +23,5 @@ export const donationMsg = (name, amount) => {
 };
 
 export const completedMsg = (name, amount) => {
-  return "Thank you for your" + amount + "donation to " + name + "!";
+  return "Thank you for your £" + amount + " donation to " + name + "!";
 };

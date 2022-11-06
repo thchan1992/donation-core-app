@@ -19,7 +19,7 @@ const CharityListItem = ({ name, imageUrl, onPress }) => {
         <Text
           style={[
             styles.text,
-            name.length > 10 ? styles.smallerText : styles.text,
+            name.length > 11 ? styles.smallerText : styles.text,
           ]}
         >
           {name}
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
 
   smallerText: {
     alignSelf: "center",
-    padding: 5,
+    padding: 1,
     fontWeight: "bold",
     textTransform: "uppercase",
     fontSize: 12,

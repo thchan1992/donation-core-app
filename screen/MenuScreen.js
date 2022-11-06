@@ -14,8 +14,9 @@ const MenuScreen = ({ navigation }) => {
         name={itemData.item.beneficiary}
         imageUrl={itemData.item.imageUrl}
         onPress={() => {
+          console.log();
           const arr = charityList.filter((char) => {
-            return char.beneficiary == itemData.item.beneficiary;
+            return char.beneficiary.beneficiary == itemData.item.beneficiary;
           });
           navigation.navigate("CharityListScreen", { charityList: arr });
         }}
@@ -27,7 +28,7 @@ const MenuScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.instrucText}>{menuScreenMsg}</Text>
       <FlatList
-        data={beneficiaryList}
+        data={beneficiaryList()}
         keyExtractor={(bene) => bene.beneficiary}
         renderItem={renderBeneficiaryList}
         numColumns={1}
