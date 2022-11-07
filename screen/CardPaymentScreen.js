@@ -10,9 +10,9 @@ const CardPaymentScreen = ({ navigation, route }) => {
   const [cardNum, setCardNum] = useState(null);
   const [cvv, setCvv] = useState(null);
   const [expDate, setExpDate] = useState("");
-  const fixCardNum = "1";
-  const fixCvv = "1";
-  const fixExpDate = "1";
+  const fixCardNum = "1234567899990000";
+  const fixCvv = "567";
+  const fixExpDate = "01/02";
 
   const showAlert = () => {
     Alert.alert(
