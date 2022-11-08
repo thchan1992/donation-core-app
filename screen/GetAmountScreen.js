@@ -17,14 +17,16 @@ const GetAmountScreen = ({ navigation, route }) => {
   const { charity } = route.params;
 
   const showAlert = () => {
-    Alert.alert("Warning", "Please Insert the donation amount", [
-      { text: "OK", onPress: () => console.log("OK Pressed") },
-    ]);
+    Alert.alert(
+      "Warning",
+      "Please Insert the donation amount, or make sure donation amount is not larger than £1000",
+      [{ text: "OK", onPress: () => console.log("OK Pressed") }]
+    );
   };
 
   const handleSubmit = () => {
     console.log(donateAmount);
-    if (donateAmount == null || donateAmount == 0) {
+    if (donateAmount == null || donateAmount == 0 || donateAmount > 1000) {
       showAlert();
     } else {
       navigation.navigate("CardPaymentScreen", {
