@@ -19,7 +19,7 @@ const GetAmountScreen = ({ navigation, route }) => {
   const showAlert = () => {
     Alert.alert(
       "Warning",
-      "Please Insert the donation amount, or make sure donation amount is not larger than £1000",
+      "Please Insert the donation amount, or make sure donation amount is not larger than £1000.",
       [{ text: "OK", onPress: () => console.log("OK Pressed") }]
     );
   };
