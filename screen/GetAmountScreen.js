@@ -51,7 +51,7 @@ const GetAmountScreen = ({ navigation, route }) => {
             height={40}
             maxWidth={160}
             minWidth={160}
-            maxLength={5}
+            maxLength={6}
             isPound={true}
           />
           <PrimaryButton text={"Donate"} onPress={handleSubmit} />
