@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BeneficiaryListItem renders correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#28C7FA",
+      "borderColor": "#FF304F",
+      "borderRadius": 8,
+      "borderWidth": 1.5,
+      "height": 180,
+      "margin": 5,
+      "opacity": 1,
+      "width": 200,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Object {
+        "alignSelf": "center",
+        "borderColor": "#FF304F",
+        "borderRadius": 8,
+        "borderWidth": 1.5,
+        "height": 150,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "black",
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "padding": 2.5,
+        "textTransform": "uppercase",
+      }
+    }
+  >
+    Test Charity
+  </Text>
+</View>
+`;

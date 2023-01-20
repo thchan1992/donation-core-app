@@ -74,7 +74,11 @@ const CardPaymentScreen = ({ navigation, route }) => {
             minWidth={150}
             maxLength={5}
           />
-          <PrimaryButton text="Confirm" onPress={handlePayment} />
+          <PrimaryButton
+            text="Confirm"
+            onPress={handlePayment}
+            id={"confirm-button"}
+          />
         </View>
       </View>
     </ScrollView>

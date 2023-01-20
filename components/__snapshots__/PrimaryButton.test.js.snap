@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrimaryButton renders correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#28C7FA",
+      "borderColor": "#FF304F",
+      "borderRadius": 8,
+      "borderWidth": 1.5,
+      "height": 70,
+      "margin": 10,
+      "opacity": 1,
+      "width": 150,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "fontSize": 30,
+        "fontWeight": "bold",
+        "padding": 16,
+      }
+    }
+  >
+    Test Button
+  </Text>
+</View>
+`;

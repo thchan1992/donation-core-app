@@ -1,0 +1,521 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharityScreen renders correctly with default state 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "paddingTop": 10,
+    }
+  }
+>
+  <Image
+    source="image.com"
+    style={
+      Object {
+        "borderColor": "#FF304F",
+        "borderRadius": 8,
+        "borderWidth": 3,
+        "height": 300,
+        "padding": 30,
+        "paddingTop": 40,
+        "width": 300,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "white",
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "padding": 3,
+        "textTransform": "uppercase",
+      }
+    }
+  >
+    charity 1
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {
+          "alignItems": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#28C7FA",
+          "borderColor": "#FF304F",
+          "borderRadius": 8,
+          "borderWidth": 1.5,
+          "height": 70,
+          "margin": 10,
+          "opacity": 1,
+          "width": 150,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "padding": 16,
+          }
+        }
+      >
+        Donate
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#28C7FA",
+          "borderColor": "#FF304F",
+          "borderRadius": 8,
+          "borderWidth": 1.5,
+          "height": 70,
+          "margin": 10,
+          "opacity": 1,
+          "width": 150,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "padding": 16,
+          }
+        }
+      >
+        Detail
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`CharityScreen renders correctly with showDet state true 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "paddingTop": 10,
+    }
+  }
+>
+  <Image
+    source="image.com"
+    style={
+      Object {
+        "borderColor": "#FF304F",
+        "borderRadius": 8,
+        "borderWidth": 3,
+        "height": 300,
+        "padding": 30,
+        "paddingTop": 40,
+        "width": 300,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "white",
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "padding": 3,
+        "textTransform": "uppercase",
+      }
+    }
+  >
+    charity 1
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {
+          "alignItems": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#28C7FA",
+          "borderColor": "#FF304F",
+          "borderRadius": 8,
+          "borderWidth": 1.5,
+          "height": 70,
+          "margin": 10,
+          "opacity": 1,
+          "width": 150,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "padding": 16,
+          }
+        }
+      >
+        Donate
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#28C7FA",
+          "borderColor": "#FF304F",
+          "borderRadius": 8,
+          "borderWidth": 1.5,
+          "height": 70,
+          "margin": 10,
+          "opacity": 1,
+          "width": 150,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "padding": 16,
+          }
+        }
+      >
+        Detail
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`CharityScreen should match the snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "paddingTop": 10,
+    }
+  }
+>
+  <Image
+    source="image.com"
+    style={
+      Object {
+        "borderColor": "#FF304F",
+        "borderRadius": 8,
+        "borderWidth": 3,
+        "height": 300,
+        "padding": 30,
+        "paddingTop": 40,
+        "width": 300,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "white",
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "padding": 3,
+        "textTransform": "uppercase",
+      }
+    }
+  >
+    charity 1
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {
+          "alignItems": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#28C7FA",
+          "borderColor": "#FF304F",
+          "borderRadius": 8,
+          "borderWidth": 1.5,
+          "height": 70,
+          "margin": 10,
+          "opacity": 1,
+          "width": 150,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "padding": 16,
+          }
+        }
+      >
+        Donate
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#28C7FA",
+          "borderColor": "#FF304F",
+          "borderRadius": 8,
+          "borderWidth": 1.5,
+          "height": 70,
+          "margin": 10,
+          "opacity": 1,
+          "width": 150,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "padding": 16,
+          }
+        }
+      >
+        Detail
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`CharityScreen should show details when detail button is pressed 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "paddingTop": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "white",
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "padding": 3,
+        "textTransform": "uppercase",
+      }
+    }
+  >
+    charity 1
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {
+          "alignItems": "center",
+        },
+        Object {
+          "borderBottomColor": "#FF304F",
+          "borderBottomWidth": 0.5,
+        },
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#28C7FA",
+          "borderColor": "#FF304F",
+          "borderRadius": 8,
+          "borderWidth": 1.5,
+          "height": 70,
+          "margin": 10,
+          "opacity": 1,
+          "width": 150,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "padding": 16,
+          }
+        }
+      >
+        Donate
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#28C7FA",
+          "borderColor": "#FF304F",
+          "borderRadius": 8,
+          "borderWidth": 1.5,
+          "height": 70,
+          "margin": 10,
+          "opacity": 1,
+          "width": 150,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "padding": 16,
+          }
+        }
+      >
+        Hide
+      </Text>
+    </View>
+  </View>
+  <RCTScrollView>
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 30,
+            "padding": 10,
+          }
+        }
+      >
+        info
+      </Text>
+    </View>
+  </RCTScrollView>
+</View>
+`;

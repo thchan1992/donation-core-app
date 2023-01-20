@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuScreen should match the snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "alignSelf": "center",
+        "color": "white",
+        "fontSize": 25,
+        "fontWeight": "bold",
+        "padding": 5,
+      }
+    }
+  >
+    Please choose who you like to help?
+  </Text>
+  <RCTScrollView
+    collapsable={false}
+    data={
+      Array [
+        Object {
+          "beneficiary": "disabled",
+          "imageUrl": 1,
+        },
+        Object {
+          "beneficiary": "wild animal",
+          "imageUrl": 1,
+        },
+        Object {
+          "beneficiary": "cancer patient",
+          "imageUrl": 1,
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    handlerTag={1}
+    handlerType="NativeViewGestureHandler"
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#28C7FA",
+              "borderColor": "#FF304F",
+              "borderRadius": 8,
+              "borderWidth": 1.5,
+              "height": 180,
+              "margin": 5,
+              "opacity": 1,
+              "width": 200,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Object {
+                "alignSelf": "center",
+                "borderColor": "#FF304F",
+                "borderRadius": 8,
+                "borderWidth": 1.5,
+                "height": 150,
+                "justifyContent": "center",
+                "width": 200,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "black",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "padding": 2.5,
+                "textTransform": "uppercase",
+              }
+            }
+          >
+            disabled
+          </Text>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#28C7FA",
+              "borderColor": "#FF304F",
+              "borderRadius": 8,
+              "borderWidth": 1.5,
+              "height": 180,
+              "margin": 5,
+              "opacity": 1,
+              "width": 200,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Object {
+                "alignSelf": "center",
+                "borderColor": "#FF304F",
+                "borderRadius": 8,
+                "borderWidth": 1.5,
+                "height": 150,
+                "justifyContent": "center",
+                "width": 200,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "black",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "padding": 2.5,
+                "textTransform": "uppercase",
+              }
+            }
+          >
+            wild animal
+          </Text>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#28C7FA",
+              "borderColor": "#FF304F",
+              "borderRadius": 8,
+              "borderWidth": 1.5,
+              "height": 180,
+              "margin": 5,
+              "opacity": 1,
+              "width": 200,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Object {
+                "alignSelf": "center",
+                "borderColor": "#FF304F",
+                "borderRadius": 8,
+                "borderWidth": 1.5,
+                "height": 150,
+                "justifyContent": "center",
+                "width": 200,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "black",
+                "fontSize": 20,
+                "fontWeight": "bold",
+                "padding": 2.5,
+                "textTransform": "uppercase",
+              }
+            }
+          >
+            cancer patient
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharityListItem renders correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#28C7FA",
+      "borderColor": "#FF304F",
+      "borderRadius": 8,
+      "borderWidth": 1.5,
+      "height": 180,
+      "margin": 10,
+      "opacity": 1,
+      "width": 150,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Object {
+        "alignSelf": "center",
+        "borderColor": "#FF304F",
+        "borderRadius": 8,
+        "borderWidth": 1.5,
+        "height": 150,
+        "justifyContent": "center",
+        "width": 150,
+      }
+    }
+  />
+  <View>
+    <Text
+      style={
+        Array [
+          Object {
+            "alignSelf": "center",
+            "color": "black",
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "padding": 3,
+            "textTransform": "uppercase",
+          },
+          Object {
+            "alignSelf": "center",
+            "color": "black",
+            "fontSize": 12,
+            "fontWeight": "bold",
+            "padding": 1,
+            "textTransform": "uppercase",
+          },
+        ]
+      }
+    >
+      Test Charity
+    </Text>
+  </View>
+</View>
+`;
