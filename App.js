@@ -12,7 +12,9 @@ import CharityListScreen from "./screen/CharityListScreen";
 export default function App() {
   return (
     <>
+      {/* Navigation container to handle the navigation flow */}
       <NavigationContainer>
+        {/* Stack Navigator to handle the switching between screens */}
         <Stack.Navigator
           screenOptions={{
             headerStyle: {

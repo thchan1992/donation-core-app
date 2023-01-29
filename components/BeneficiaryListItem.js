@@ -1,5 +1,6 @@
 import { TouchableOpacity, View, Text, StyleSheet, Image } from "react-native";
 
+//The purpose of the "BeneficiaryListItem" component is to display a single item in a list of beneficiaries, which consists of a image and a name. It also allows user to interact with the item by providing a onPress function.
 const BeneficiaryListItem = ({ name, imageUrl, onPress }) => {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>

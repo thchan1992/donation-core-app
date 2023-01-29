@@ -1,7 +1,8 @@
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
-
+// PrimaryButton is a functional component that renders a button with a text and onPress functionality
 const PrimaryButton = ({ text, onPress }) => {
   return (
+    // TouchableOpacity is used to make the button responsive to touch/press events
     <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>

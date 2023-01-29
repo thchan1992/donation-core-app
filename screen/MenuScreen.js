@@ -7,6 +7,7 @@ import { beneficiaryList, charityList } from "../data/charityData";
 import BeneficiaryListItem from "../components/BeneficiaryListItem";
 import { menuScreenMsg } from "../constants/msg";
 
+//This component displays the list of beneficiaries and allow the user to select one of the beneficiaries. When a beneficiaries is selected, it filters the charity list based on the selected beneficiary and navigates to CharityListScreen to display the filtered charity list.
 const MenuScreen = ({ navigation }) => {
   const renderBeneficiaryList = (itemData) => {
     return (

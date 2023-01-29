@@ -13,9 +13,11 @@ import NumberInput from "../components/NumberInput";
 import { getAmountScreenMsg } from "../constants/msg";
 
 const GetAmountScreen = ({ navigation, route }) => {
+  // State to keep track of the donation amount entered by the user
   const [donateAmount, setDonateAmount] = useState(null);
+  // Charity object passed in as a prop via the route params
   const { charity } = route.params;
-
+  // Function to show an alert if the user tries to submit an invalid donation amount
   const showAlert = () => {
     Alert.alert(
       "Warning",
@@ -23,7 +25,7 @@ const GetAmountScreen = ({ navigation, route }) => {
       [{ text: "OK", onPress: () => console.log("OK Pressed") }]
     );
   };
-
+  // Function to handle the form submission, navigate to the next screen if the donation amount is valid
   const handleSubmit = () => {
     console.log(donateAmount);
     if (donateAmount == null || donateAmount == 0 || donateAmount > 1000) {

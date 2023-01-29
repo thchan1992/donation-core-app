@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 
+//A customisable text input that allows users to input numbers. It has the option to display a "£" symbol and set maximum and minimum width and length of the input.
 const NumberInput = ({
   value,
   setter,

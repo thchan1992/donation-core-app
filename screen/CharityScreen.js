@@ -2,8 +2,12 @@ import { useState } from "react";
 import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 import { horizontalLine } from "../util/styling";
+
+//The CharityScreen is a component that displays details of a charity, including the charity's name, image, and information. The component allows users to navigate to the GetAmountScreen for donating to the charity, as well as toggle the visibility of the charity's detailed information.
 const CharityScreen = ({ navigation, route }) => {
+  // state variable to keep track of whether the charity details are currently being shown
   const [showDet, setShowDet] = useState(false);
+  // destructuring the charity object from the route params
   const { charity } = route.params;
   return (
     <View style={styles.container}>

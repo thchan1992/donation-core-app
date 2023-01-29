@@ -6,14 +6,18 @@ import { ScrollView } from "react-native-gesture-handler";
 import { donationMsg } from "../constants/msg";
 
 const CardPaymentScreen = ({ navigation, route }) => {
+  // Destructuring route params to get charity and donate amount
   const { charity, donateAmount } = route.params;
+  // State hooks to keep track of card number, cvv, and expiration date input by user
   const [cardNum, setCardNum] = useState(null);
   const [cvv, setCvv] = useState(null);
   const [expDate, setExpDate] = useState("");
+  // Hardcoded values for testing purposes
   const fixCardNum = "1111111111111111";
   const fixCvv = "111";
   const fixExpDate = "11/11";
 
+  // Function to show an alert when card details are invalid
   const showAlert = () => {
     Alert.alert(
       "Warning",
@@ -22,6 +26,7 @@ const CardPaymentScreen = ({ navigation, route }) => {
     );
   };
 
+  // Function to handle payment, check if card details are valid, and navigate to receipt screen
   const handlePayment = () => {
     if (cardNum == fixCardNum && cvv == fixCvv && expDate == fixExpDate) {
       navigation.navigate("ReceiptScreen", {
@@ -32,7 +37,7 @@ const CardPaymentScreen = ({ navigation, route }) => {
       showAlert();
     }
   };
-
+  // Function to handle expiration date input, adding a forward slash after 2 characters to look like a exp date
   const handleExpDate = (e) => {
     setExpDate(e);
     if (e.length == 2 && expDate.length == 1) {

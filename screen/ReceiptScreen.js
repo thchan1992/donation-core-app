@@ -2,6 +2,7 @@ import { Text, StyleSheet, View } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 
 const ReceiptScreen = ({ navigation, route }) => {
+  // handleCompleted function will reset the navigation stack and navigate to the MenuScreen
   const handleCompleted = () => {
     navigation.reset({
       index: 0,

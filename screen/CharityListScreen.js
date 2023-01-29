@@ -4,7 +4,10 @@ import PrimaryButton from "../components/PrimaryButton";
 import CharityListItem from "../components/CharityListItem";
 import { FlatList } from "react-native-gesture-handler";
 import { charitySuggestionScreenMsg } from "../constants/msg";
+
+//This component renders a list of charities on the screen and allows the user to navigate to a specific charity's details screen when a charity is selected from the list. It uses a FlatList to display the data and a CharityListItem component for each charity.
 const CharityListScreen = ({ navigation, route }) => {
+  // Helper function to render each charity list item
   const renderCharityList = (itemData) => {
     return (
       <CharityListItem
